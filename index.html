@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>format</title>
+    <link href='https://danehansen.github.io/package-helpers/styles.css' rel='stylesheet' />
+  </head>
+  <body>
+<h1>format</h1>
+
+<p>The format library contains a collection of formatting methods either written or collected to make my life easier. These methods are not validators, they all work under the assumption that the input is valid already.</p>
+
+<h2>Installation</h2>
+
+<p><code>npm install --save @danehansen/format</code></p>
+
+<h2>Usage</h2>
+
+<p>As a module:</p>
+
+<pre><code>import * as format from '@danehansen/format';
+
+var zip = '902101234'
+zip = format.zipCode(zip);
+</code></pre>
+
+<p>In your browser:</p>
+
+<pre><code>&lt;script src='danehansen-format.min.js'&gt;&lt;/script&gt;
+&lt;script&gt;
+  var format = window.danehansen.format;
+  var zip = '902101234'
+  zip = format.zipCode(zip);
+&lt;/script&gt;
+</code></pre>
+
+<h2>Methods</h2>
+
+<ul>
+<li><strong>creditCard</strong>(str:String, secure:* = '*'):String <br />
+Accepts a valid 15-16 digit credit card number and puts the spaces in appropriately. Optionally will replace all digits except the last 4 with another character.</li>
+<li><strong>dollars</strong>(amount:Float, showCents:Boolean = true):String <br />
+Turns a float into a properly formatted string with commas and dollar sign.</li>
+<li><strong>expiration</strong>(str:String):String <br />
+Formats a month/year date as MM/YY.</li>
+<li><strong>phoneNumber</strong>(str:String, delimiter:String):String <br />
+Formats a phone number as 1 (234) 567-8910 by default or else with an optional delimiter like 123.456.7891</li>
+<li><strong>prepend</strong>(str:String, len:uint, char:String = '0'):String <br />
+Prepends a string with a character until it reaches a minimum length.</li>
+<li><strong>seperateThousands</strong>(str:String):String <br />
+Formats a number or string like 1,234,567,890.</li>
+<li><strong>time</strong>(h:uint, m:uint, s:uint, ms:uint, delimiter:String = ':'):String <br />
+Formats a time like 01:02:03:004. If hours or milliseconds are not supplied, they will be left off the string.</li>
+<li><strong>toTitleCase</strong>(str:String):String <br />
+Formats string into title case.</li>
+<li><strong>unicode</strong>(str:String):String <br />
+Converts a string to unicode.</li>
+<li><strong>zipCode</strong>(str:String, country:String = 'us'):String <br />
+Formats a US zipcode like 12345-6789 or a Canadian one like A1B 2C3.</li>
+</ul>
+  </body>
+</html>
