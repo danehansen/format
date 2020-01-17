@@ -40,6 +40,8 @@ In your browser:
   Formats a number or string like 1,234,567,890.
 - **time**(h:uint, m:uint, s:uint, ms:uint, delimiter:String = ':'):String  
   Formats a time like 01:02:03:004. If hours or milliseconds are not supplied, they will be left off the string.
+- **toRomanNumeral**(num:uint):String  
+  Formats a positive integer into roman numerals.
 - **toTitleCase**(str:String):String  
   Formats string into title case.
 - **unicode**(str:String):String  
