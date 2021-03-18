@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   entry: {
     app: './src/format.js',
@@ -17,5 +19,6 @@ module.exports = {
     filename: 'danehansen-format.min.js',
     library: ['danehansen', 'format'],
     libraryTarget: 'umd',
+    path: __dirname,
   },
 }
