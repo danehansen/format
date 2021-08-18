@@ -17,6 +17,7 @@ module.exports = {
   },
   output: {
     filename: 'danehansen-format.min.js',
+    globalObject: 'this',
     library: ['danehansen', 'format'],
     libraryTarget: 'umd',
     path: __dirname,
